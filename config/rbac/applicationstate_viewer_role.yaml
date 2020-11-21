@@ -1,0 +1,20 @@
+# permissions for end users to view applicationstates.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: applicationstate-viewer-role
+rules:
+- apiGroups:
+  - stateful.myoperator.state
+  resources:
+  - applicationstates
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - stateful.myoperator.state
+  resources:
+  - applicationstates/status
+  verbs:
+  - get

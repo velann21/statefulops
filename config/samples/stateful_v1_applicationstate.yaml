@@ -1,0 +1,9 @@
+apiVersion: stateful.myoperator.state/v1
+kind: ApplicationState
+metadata:
+  name: applicationstate-sample
+spec:
+  # Add fields here
+  foo: bar
+  size: 4
+  config_map_name: sample21

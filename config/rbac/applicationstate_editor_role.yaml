@@ -1,0 +1,24 @@
+# permissions for end users to edit applicationstates.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: applicationstate-editor-role
+rules:
+- apiGroups:
+  - stateful.myoperator.state
+  resources:
+  - applicationstates
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - stateful.myoperator.state
+  resources:
+  - applicationstates/status
+  verbs:
+  - get
