@@ -112,6 +112,7 @@ func (r *ApplicationStateReconciler) Reconcile(req ctrl.Request) (ctrl.Result, e
 	for _, v := range getresp.Kvs {
 		fmt.Println("Key is", string(v.Key))
 		fmt.Println("value is", string(v.Value))
+		fmt.Println("KV and v done")
 
 	}
 
